@@ -18,7 +18,7 @@ const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: str
 );
 
 const BrowserMockup = () => (
-  <div className="relative w-full max-w-xl">
+  <div className="relative w-full max-w-md">
     {/* Browser window */}
     <div className="rounded-xl border border-border bg-white shadow-xl overflow-hidden">
       {/* Browser chrome */}
