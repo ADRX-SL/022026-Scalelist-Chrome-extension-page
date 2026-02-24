@@ -1,4 +1,6 @@
 import { Quote } from "lucide-react";
+import chrisHackettImg from "@/assets/chris-hackett.png";
+import baptisteGraffinImg from "@/assets/baptiste-graffin.png";
 
 const BarChart = () => {
   const competitors = [
