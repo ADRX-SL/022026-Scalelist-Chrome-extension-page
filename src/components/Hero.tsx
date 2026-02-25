@@ -1,6 +1,8 @@
 import { Star, ArrowRight, Globe, Triangle, Play, ChevronDown, Bookmark, Scissors, MapPin, Calendar, Users, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import scalelistIcon from "@/assets/scalelist-icon.png";
+import andreaRiley from "@/assets/andrea-riley.png";
+import professionalCover from "@/assets/professional-cover.png";
 const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
     {icon === "google" ? (
@@ -33,24 +35,49 @@ const BrowserMockup = () => (
         <img src={scalelistIcon} alt="Scalelist" className="h-6 w-6 rounded" />
       </div>
       {/* Page content - LinkedIn-like profile */}
-      <div className="p-5">
+      <div className="p-0">
         {/* Cover area */}
-        <div className="h-16 rounded-t-lg bg-gradient-to-r from-primary/10 to-primary/5 mb-8 relative">
+        <div className="h-20 relative overflow-hidden">
+          <img src={professionalCover} alt="" className="h-full w-full object-cover" />
           {/* Profile avatar */}
-          <div className="absolute -bottom-6 left-3">
-            <div className="h-14 w-14 rounded-full border-2 border-white bg-gray-200 relative">
-              <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-green-500" />
+          <div className="absolute -bottom-7 left-4">
+            <div className="h-16 w-16 rounded-full border-2 border-white overflow-hidden relative">
+              <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
+              <div className="absolute bottom-0.5 right-0.5 h-3 w-3 rounded-full border-2 border-white bg-green-500" />
             </div>
           </div>
         </div>
-        {/* Buttons */}
-        <div className="flex gap-2 mt-2">
-          <Button size="sm" className="rounded-full px-4 text-xs gap-1">
-            Message
-          </Button>
-          <Button size="sm" variant="outline" className="rounded-full px-4 text-xs">
-            More
-          </Button>
+        {/* Profile info */}
+        <div className="px-4 pt-9 pb-3">
+          <div className="flex items-center gap-2 mb-0.5">
+            <p className="font-bold text-sm text-foreground">Andrea Riley</p>
+            <span className="text-[10px] text-muted-foreground">1st</span>
+            <span className="rounded border border-border px-1.5 py-0.5 text-[8px] text-muted-foreground">Connected: 2/25/2026</span>
+          </div>
+          <p className="text-xs text-muted-foreground">Sales Director at n8N</p>
+          <div className="flex items-center gap-3 mt-1 text-[10px] text-muted-foreground">
+            <span className="flex items-center gap-0.5"><MapPin className="h-2.5 w-2.5" />San Francisco Bay Area</span>
+            <span className="flex items-center gap-0.5"><Users className="h-2.5 w-2.5" />500+ connections</span>
+          </div>
+          {/* Buttons */}
+          <div className="flex items-center gap-2 mt-2">
+            <Button size="sm" className="rounded-full px-4 text-xs gap-1">
+              Message
+            </Button>
+            <Button size="sm" variant="outline" className="rounded-full px-4 text-xs border-primary text-primary gap-1">
+              <Scissors className="h-3 w-3" /> Export lead
+            </Button>
+            <span className="text-muted-foreground text-lg leading-none">···</span>
+          </div>
+          <div className="flex items-center gap-2 mt-2 text-[10px] text-muted-foreground">
+            <div className="flex -space-x-1">
+              <div className="h-4 w-4 rounded-full bg-primary/20 border border-white" />
+              <div className="h-4 w-4 rounded-full bg-primary/30 border border-white" />
+            </div>
+            <span>82 mutual connections</span>
+            <span>·</span>
+            <span>2 recent posts on Linkedin</span>
+          </div>
         </div>
       </div>
     </div>
