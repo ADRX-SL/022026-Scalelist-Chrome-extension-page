@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import sarahWestwood from "@/assets/sarah-westwood.png";
 import scalelistIcon from "@/assets/scalelist-icon.png";
 import professionalCover from "@/assets/professional-cover.png";
+import n8nWebsite from "@/assets/n8n-website.png";
 
 const SarahMockup = () => (
   <div className="flex items-start justify-center py-6 px-2">
@@ -87,53 +88,24 @@ const SarahMockup = () => (
   </div>
 );
 
-{/* n8n logo as SVG in Scalelist blue */}
-const N8nLogo = () => (
-  <svg viewBox="0 0 120 40" className="h-8 w-auto" fill="none">
-    {/* Simplified n8n node-graph logo in primary blue */}
-    <circle cx="8" cy="20" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
-    <circle cx="24" cy="20" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
-    <circle cx="44" cy="12" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
-    <circle cx="44" cy="28" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
-    <path d="M13 20 L19 20" stroke="hsl(var(--primary))" strokeWidth="2.5" strokeLinecap="round" />
-    <path d="M29 18 L39 13" stroke="hsl(var(--primary))" strokeWidth="2.5" strokeLinecap="round" />
-    <path d="M29 22 L39 27" stroke="hsl(var(--primary))" strokeWidth="2.5" strokeLinecap="round" />
-  </svg>
-);
-
 const N8nCompanyMockup = () => (
   <div className="flex items-start justify-center py-6 px-2">
-    {/* Background: n8n website preview (dark) */}
-    <div className="relative rounded-xl border border-border bg-foreground shadow-xl overflow-hidden shrink-0" style={{ width: '250px' }}>
-      {/* Dark header bar simulating n8n site */}
-      <div className="px-4 py-3 flex items-center gap-2">
-        <N8nLogo />
-        <div className="ml-auto flex items-center gap-2">
-          <span className="text-[8px] text-muted-foreground/60">Product</span>
-          <span className="text-[8px] text-muted-foreground/60">Use cases</span>
-          <span className="text-[8px] text-muted-foreground/60">Docs</span>
-        </div>
-      </div>
-      {/* Hero area */}
-      <div className="px-4 pb-4">
-        <p className="text-[11px] text-muted-foreground/70 leading-tight mb-1">Flexible AI workflow automation</p>
-        <p className="text-[11px] text-primary font-medium leading-tight mb-2">for technical teams</p>
-        <div className="flex items-center gap-1.5 mt-2">
-          <Button size="sm" className="rounded-md px-2 py-0.5 text-[8px] h-5">Get started for free</Button>
-          <Button size="sm" variant="outline" className="rounded-md px-2 py-0.5 text-[8px] h-5 border-muted-foreground/30 text-muted-foreground/70">Talk to sales</Button>
-        </div>
+    {/* Background: actual n8n website screenshot */}
+    <div className="relative rounded-xl border border-border shadow-xl overflow-hidden shrink-0" style={{ width: '250px' }}>
+      <img src={n8nWebsite} alt="n8n website" className="w-full h-auto object-cover" style={{ maxHeight: '320px' }} />
+      {/* Scalelist icon overlay in toolbar area */}
+      <div className="absolute top-2 right-2">
+        <img src={scalelistIcon} alt="Scalelist" className="h-5 w-5 rounded" />
       </div>
     </div>
 
-    {/* Scalelist extension company card - overlapping right */}
+    {/* Scalelist extension card overlaid on right */}
     <div className="rounded-xl border border-border bg-white shadow-2xl overflow-hidden shrink-0 self-start mt-4" style={{ width: '210px', marginLeft: '-25px' }}>
       {/* Header with n8n logo + icons */}
       <div className="px-3 pt-3 pb-1.5">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-1.5">
-            <div className="h-8 w-8 rounded bg-muted flex items-center justify-center shrink-0">
-              <N8nLogo />
-            </div>
+            <div className="h-8 w-8 rounded bg-muted flex items-center justify-center shrink-0 text-[10px] font-bold text-foreground">n8n</div>
             <div>
               <div className="flex items-center gap-1">
                 <p className="font-bold text-xs text-foreground">n8n</p>
