@@ -87,7 +87,9 @@ const BrowserMockup = () => (
       {/* Profile header with avatar and icons */}
       <div className="px-4 pt-4 pb-2">
         <div className="flex items-start justify-between mb-2">
-          <div className="h-10 w-10 rounded-full bg-gray-200 shrink-0" />
+          <div className="h-10 w-10 rounded-full shrink-0 overflow-hidden">
+            <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
+          </div>
           <div className="flex items-center gap-1">
             <Globe className="h-3.5 w-3.5 text-muted-foreground" />
             <Scissors className="h-3.5 w-3.5 text-muted-foreground" />
