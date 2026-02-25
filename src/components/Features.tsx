@@ -4,6 +4,7 @@ import sarahWestwood from "@/assets/sarah-westwood.png";
 import scalelistIcon from "@/assets/scalelist-icon.png";
 import professionalCover from "@/assets/professional-cover.png";
 import n8nWebsite from "@/assets/n8n-website.png";
+import n8nLogo from "@/assets/n8n-logo.png";
 
 const SarahMockup = () => (
   <div className="flex items-start justify-center py-6 px-2">
@@ -103,7 +104,7 @@ const N8nCompanyMockup = () => (
       <div className="px-3 pt-3 pb-1.5">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-1.5">
-            <div className="h-8 w-8 rounded bg-muted flex items-center justify-center shrink-0 text-[10px] font-bold text-foreground">n8n</div>
+            <img src={n8nLogo} alt="n8n" className="h-8 w-8 rounded shrink-0" />
             <div>
               <div className="flex items-center gap-1">
                 <p className="font-bold text-xs text-foreground">n8n</p>
