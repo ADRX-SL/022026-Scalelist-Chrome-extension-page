@@ -193,14 +193,14 @@ const FeatureCard = ({
   bullets: string[];
   customImage?: React.ReactNode;
 }) => (
-  <div className="rounded-2xl bg-card p-8">
+  <div className="rounded-2xl bg-card p-8 flex flex-col h-full">
     {/* Image placeholder */}
     {customImage ? (
-      <div className="mb-6 rounded-xl bg-muted overflow-visible py-6 px-4 flex items-center justify-center">
+      <div className="mb-6 rounded-xl bg-muted overflow-visible py-6 px-4 flex items-center justify-center flex-1">
         {customImage}
       </div>
     ) : (
-      <div className="mb-6 flex h-48 items-center justify-center rounded-xl bg-muted">
+      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted flex-1">
         <Icon className="h-16 w-16 text-muted-foreground/40" />
       </div>
     )}
