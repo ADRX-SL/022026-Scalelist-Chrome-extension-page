@@ -1,4 +1,4 @@
-import { Globe, Users, CheckCircle, Star, ArrowRight, ChevronDown, Bookmark, Scissors, MapPin, Play } from "lucide-react";
+import { Globe, Users, CheckCircle, Star, ArrowRight, ChevronDown, Bookmark, Scissors, MapPin, Play, Building2, Calendar, DollarSign, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import sarahWestwood from "@/assets/sarah-westwood.png";
 import scalelistIcon from "@/assets/scalelist-icon.png";
@@ -87,6 +87,119 @@ const SarahMockup = () => (
   </div>
 );
 
+{/* n8n logo as SVG in Scalelist blue */}
+const N8nLogo = () => (
+  <svg viewBox="0 0 120 40" className="h-8 w-auto" fill="none">
+    {/* Simplified n8n node-graph logo in primary blue */}
+    <circle cx="8" cy="20" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
+    <circle cx="24" cy="20" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
+    <circle cx="44" cy="12" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
+    <circle cx="44" cy="28" r="5" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none" />
+    <path d="M13 20 L19 20" stroke="hsl(var(--primary))" strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M29 18 L39 13" stroke="hsl(var(--primary))" strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M29 22 L39 27" stroke="hsl(var(--primary))" strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
+);
+
+const N8nCompanyMockup = () => (
+  <div className="flex items-start justify-center py-6 px-2">
+    {/* Background: n8n website preview (dark) */}
+    <div className="relative rounded-xl border border-border bg-foreground shadow-xl overflow-hidden shrink-0" style={{ width: '250px' }}>
+      {/* Dark header bar simulating n8n site */}
+      <div className="px-4 py-3 flex items-center gap-2">
+        <N8nLogo />
+        <div className="ml-auto flex items-center gap-2">
+          <span className="text-[8px] text-muted-foreground/60">Product</span>
+          <span className="text-[8px] text-muted-foreground/60">Use cases</span>
+          <span className="text-[8px] text-muted-foreground/60">Docs</span>
+        </div>
+      </div>
+      {/* Hero area */}
+      <div className="px-4 pb-4">
+        <p className="text-[11px] text-muted-foreground/70 leading-tight mb-1">Flexible AI workflow automation</p>
+        <p className="text-[11px] text-primary font-medium leading-tight mb-2">for technical teams</p>
+        <div className="flex items-center gap-1.5 mt-2">
+          <Button size="sm" className="rounded-md px-2 py-0.5 text-[8px] h-5">Get started for free</Button>
+          <Button size="sm" variant="outline" className="rounded-md px-2 py-0.5 text-[8px] h-5 border-muted-foreground/30 text-muted-foreground/70">Talk to sales</Button>
+        </div>
+      </div>
+    </div>
+
+    {/* Scalelist extension company card - overlapping right */}
+    <div className="rounded-xl border border-border bg-white shadow-2xl overflow-hidden shrink-0 self-start mt-4" style={{ width: '210px', marginLeft: '-25px' }}>
+      {/* Header with n8n logo + icons */}
+      <div className="px-3 pt-3 pb-1.5">
+        <div className="flex items-start justify-between mb-2">
+          <div className="flex items-center gap-1.5">
+            <div className="h-8 w-8 rounded bg-muted flex items-center justify-center shrink-0">
+              <N8nLogo />
+            </div>
+            <div>
+              <div className="flex items-center gap-1">
+                <p className="font-bold text-xs text-foreground">n8n</p>
+                <div className="flex gap-0.5">
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-0.5">
+            <Globe className="h-3 w-3 text-muted-foreground" />
+            <Scissors className="h-3 w-3 text-muted-foreground" />
+            <Bookmark className="h-3 w-3 text-muted-foreground" />
+            <span className="rounded bg-primary/10 px-1 text-[7px] font-bold text-primary">FREE</span>
+          </div>
+        </div>
+        <p className="text-[10px] text-muted-foreground">Information technology & services</p>
+      </div>
+
+      {/* Add to company list button */}
+      <div className="px-3 py-1.5">
+        <Button size="sm" className="w-full rounded-lg text-[10px] h-7 gap-1">
+          <Play className="h-2.5 w-2.5 fill-primary-foreground" /> Add to company list
+        </Button>
+      </div>
+
+      {/* About section */}
+      <div className="px-3 py-1.5">
+        <p className="text-[9px] font-semibold text-foreground mb-1 flex items-center gap-0.5">
+          About <ChevronDown className="h-2 w-2" />
+        </p>
+        <p className="text-[9px] text-muted-foreground leading-relaxed">
+          n8n is a workflow automation platform that gives technical teams the flexibility of code with the speed of no-code...Show more
+        </p>
+      </div>
+
+      {/* Company details */}
+      <div className="px-3 py-1.5 space-y-1.5">
+        <div className="flex items-center gap-1.5 text-[10px] text-foreground">
+          <MapPin className="h-3 w-3 text-muted-foreground shrink-0" />
+          <span>Berlin, Germany</span>
+        </div>
+        <div className="flex items-center gap-1.5 text-[10px] text-foreground">
+          <Calendar className="h-3 w-3 text-muted-foreground shrink-0" />
+          <span>Founded in 2019</span>
+        </div>
+        <div className="flex items-center gap-1.5 text-[10px] text-foreground">
+          <Users className="h-3 w-3 text-muted-foreground shrink-0" />
+          <span>200+ employees</span>
+        </div>
+        <div className="flex items-center gap-1.5 text-[10px] text-foreground">
+          <DollarSign className="h-3 w-3 text-muted-foreground shrink-0" />
+          <span>$50M+ annual revenue</span>
+        </div>
+      </div>
+
+      {/* Company keywords */}
+      <div className="px-3 py-1.5 pb-3">
+        <p className="text-[9px] text-muted-foreground">Company keywords</p>
+      </div>
+    </div>
+  </div>
+);
+
 const FeatureCard = ({
   title,
   icon: Icon,
@@ -144,6 +257,7 @@ const Features = () => {
           <FeatureCard
             title="On Any Website"
             icon={Globe}
+            customImage={<N8nCompanyMockup />}
             bullets={[
               "Extract emails and mobile numbers from any company website",
               "Effortless List Building: Export leads instantly to your CRM or CSV",
