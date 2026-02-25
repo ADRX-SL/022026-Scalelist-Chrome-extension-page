@@ -37,7 +37,7 @@ const BrowserMockup = () => (
       {/* Page content - LinkedIn-like profile */}
       <div className="p-0">
         {/* Cover area */}
-        <div className="h-20 relative overflow-hidden">
+        <div className="h-20 relative">
           <img src={professionalCover} alt="" className="h-full w-full object-cover" />
           {/* Profile avatar */}
           <div className="absolute -bottom-14 left-4">
