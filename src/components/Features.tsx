@@ -89,18 +89,16 @@ const SarahMockup = () => (
 );
 
 const N8nCompanyMockup = () => (
-  <div className="flex items-start justify-center py-6 px-2">
-    {/* Background: actual n8n website screenshot */}
-    <div className="relative rounded-xl border border-border shadow-xl overflow-hidden shrink-0" style={{ width: '250px' }}>
-      <img src={n8nWebsite} alt="n8n website" className="w-full h-auto object-cover" style={{ maxHeight: '320px' }} />
-      {/* Scalelist icon overlay in toolbar area */}
-      <div className="absolute top-2 right-2">
-        <img src={scalelistIcon} alt="Scalelist" className="h-5 w-5 rounded" />
-      </div>
+  <div className="relative w-full overflow-hidden rounded-xl" style={{ minHeight: '320px' }}>
+    {/* Background: n8n website screenshot filling entire area */}
+    <img src={n8nWebsite} alt="n8n website" className="absolute inset-0 w-full h-full object-cover" />
+    {/* Scalelist icon in top-right */}
+    <div className="absolute top-2 right-2 z-10">
+      <img src={scalelistIcon} alt="Scalelist" className="h-5 w-5 rounded" />
     </div>
 
-    {/* Scalelist extension card overlaid on right */}
-    <div className="rounded-xl border border-border bg-white shadow-2xl overflow-hidden shrink-0 self-start mt-4" style={{ width: '210px', marginLeft: '-25px' }}>
+    {/* Foreground: Scalelist extension card */}
+    <div className="absolute top-4 right-3 z-10 rounded-xl border border-border bg-white shadow-2xl overflow-hidden" style={{ width: '200px' }}>
       {/* Header with n8n logo + icons */}
       <div className="px-3 pt-3 pb-1.5">
         <div className="flex items-start justify-between mb-2">
@@ -186,7 +184,7 @@ const FeatureCard = ({
   <div className="rounded-2xl bg-card p-8">
     {/* Image placeholder */}
     {customImage ? (
-      <div className="mb-6 rounded-xl bg-muted">
+      <div className="mb-6 rounded-xl overflow-hidden bg-muted">
         {customImage}
       </div>
     ) : (
