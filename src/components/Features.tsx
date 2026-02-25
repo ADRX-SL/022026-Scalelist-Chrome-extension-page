@@ -5,8 +5,8 @@ import scalelistIcon from "@/assets/scalelist-icon.png";
 import professionalCover from "@/assets/professional-cover.png";
 
 const SarahMockup = () => (
-  <div className="relative w-full h-80 flex items-center justify-center overflow-hidden">
-    <div className="relative scale-[0.7] origin-center" style={{ width: '460px' }}>
+  <div className="relative w-full h-[420px] flex items-center justify-center overflow-hidden">
+    <div className="relative scale-[0.85] origin-center" style={{ width: '460px' }}>
       {/* Browser window */}
       <div className="rounded-xl border border-border bg-white shadow-xl overflow-hidden" style={{ width: '320px' }}>
         {/* Browser chrome */}
