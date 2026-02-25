@@ -1,6 +1,6 @@
-import { Star, ArrowRight, Globe, Triangle, Play } from "lucide-react";
+import { Star, ArrowRight, Globe, Triangle, Play, ChevronDown, Bookmark, Scissors, MapPin, Calendar, Users, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import scalelistIcon from "@/assets/scalelist-icon.png";
 const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
     {icon === "google" ? (
@@ -24,76 +24,122 @@ const BrowserMockup = () => (
       {/* Browser chrome */}
       <div className="flex items-center gap-2 border-b border-border bg-gray-50 px-4 py-3">
         <div className="flex gap-1.5">
-          <div className="h-3 w-3 rounded-full bg-red-400" />
-          <div className="h-3 w-3 rounded-full bg-yellow-400" />
-          <div className="h-3 w-3 rounded-full bg-green-400" />
+          <div className="h-3 w-3 rounded-full bg-primary/30" />
+          <div className="h-3 w-3 rounded-full bg-primary/20" />
+          <div className="h-3 w-3 rounded-full bg-primary/15" />
         </div>
         <div className="ml-4 flex-1 rounded-md bg-gray-200 px-3 py-1 text-xs text-muted-foreground" />
+        {/* Scalelist logo in toolbar */}
+        <img src={scalelistIcon} alt="Scalelist" className="h-6 w-6 rounded" />
       </div>
-      {/* Page content - LinkedIn-like placeholders */}
-      <div className="p-6 space-y-4">
-        {[...Array(4)].map((_, i) => (
-          <div key={i} className="flex gap-3">
-            <div className="h-12 w-12 rounded-md bg-gray-200 shrink-0" />
-            <div className="flex-1 space-y-2">
-              <div className="h-3 w-3/4 rounded bg-gray-200" />
-              <div className="h-3 w-1/2 rounded bg-gray-200" />
+      {/* Page content - LinkedIn-like profile */}
+      <div className="p-5">
+        {/* Cover area */}
+        <div className="h-16 rounded-t-lg bg-gradient-to-r from-primary/10 to-primary/5 mb-8 relative">
+          {/* Profile avatar */}
+          <div className="absolute -bottom-6 left-3">
+            <div className="h-14 w-14 rounded-full border-2 border-white bg-gray-200 relative">
+              <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-green-500" />
             </div>
           </div>
-        ))}
+        </div>
+        {/* Buttons */}
+        <div className="flex gap-2 mt-2">
+          <Button size="sm" className="rounded-full px-4 text-xs gap-1">
+            Message
+          </Button>
+          <Button size="sm" variant="outline" className="rounded-full px-4 text-xs">
+            More
+          </Button>
+        </div>
       </div>
     </div>
 
     {/* Extension panel - overlaid on right */}
     <div className="absolute top-12 -right-4 w-64 rounded-xl border border-border bg-white shadow-2xl overflow-hidden">
-      {/* Extension header */}
-      <div className="flex items-center gap-2 px-4 pt-4 pb-2">
-        <div className="flex h-6 w-6 items-center justify-center rounded bg-primary text-[10px] font-bold text-primary-foreground">
-          S
+      {/* Profile header with avatar and icons */}
+      <div className="px-4 pt-4 pb-2">
+        <div className="flex items-start justify-between mb-2">
+          <div className="h-10 w-10 rounded-full bg-gray-200 shrink-0" />
+          <div className="flex items-center gap-1">
+            <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+            <Scissors className="h-3.5 w-3.5 text-muted-foreground" />
+            <Bookmark className="h-3.5 w-3.5 text-muted-foreground" />
+            <span className="rounded bg-primary/10 px-1 text-[8px] font-bold text-primary">FREE</span>
+          </div>
         </div>
-        <span className="font-semibold text-sm text-foreground">Scalelist</span>
-        <div className="ml-auto flex gap-1">
-          <div className="h-4 w-4 rounded bg-gray-200" />
-          <div className="h-4 w-4 rounded bg-gray-200" />
-        </div>
+        <p className="font-bold text-sm text-foreground">Daniel Scott</p>
+        <p className="text-xs text-muted-foreground">Support Advisor at Zapier</p>
+        <p className="text-[10px] text-muted-foreground mt-0.5">Los Angeles, California, United States</p>
       </div>
 
-      {/* Profile */}
-      <div className="px-4 py-3 flex items-center gap-3">
-        <div className="h-10 w-10 rounded-full bg-gray-200 shrink-0" />
-        <div>
-          <p className="font-bold text-sm text-foreground">Daniel Scott</p>
-          <p className="text-xs text-muted-foreground">Support Advisor at Zapier</p>
+      {/* Push to Hubspot + Add to list */}
+      <div className="px-4 py-2 flex items-center gap-2">
+        <div className="flex items-center gap-1 rounded-lg border border-border px-3 py-1.5 text-xs text-muted-foreground flex-1">
+          <Scissors className="h-3 w-3" />
+          <span>Push to Hubspot</span>
+          <ChevronDown className="h-3 w-3 ml-auto" />
         </div>
-      </div>
-
-      {/* Push to Hubspot */}
-      <div className="mx-4 flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm text-muted-foreground">
-        <span>Push to Hubspot</span>
-        <ArrowRight className="h-3 w-3" />
-      </div>
-
-      {/* Add to list button */}
-      <div className="px-4 py-3">
-        <Button className="w-full gap-2 rounded-full">
-          <Play className="h-4 w-4 fill-primary-foreground" /> Add to list
+        <Button size="sm" className="rounded-lg px-3 py-1.5 text-xs gap-1">
+          <Play className="h-3 w-3 fill-primary-foreground" /> Add to list
         </Button>
       </div>
 
       {/* Contact details */}
-      <div className="px-4 pb-2">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1">Contact Details</p>
-        <p className="text-sm font-medium text-primary">danielscott@zapier.com</p>
-        <p className="text-sm text-foreground mt-0.5">+1 78 617 74 86</p>
+      <div className="px-4 py-2">
+        <p className="text-[10px] font-semibold text-muted-foreground mb-1 flex items-center gap-1">
+          Contact details <ChevronDown className="h-2.5 w-2.5" />
+        </p>
+        <p className="text-xs font-medium text-primary">danielscott@zapier.com</p>
+        <p className="text-xs text-foreground mt-0.5">+1 78 617 74 86</p>
       </div>
 
       {/* Company info */}
-      <div className="px-4 py-3 border-t border-border">
-        <div className="flex items-center gap-2 mb-1">
-          <div className="h-5 w-5 rounded bg-orange-500" />
-          <span className="font-semibold text-sm text-foreground">Zapier</span>
+      <div className="px-4 py-2 border-t border-border">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center gap-2">
+            <div className="h-5 w-5 rounded bg-primary/20 flex items-center justify-center">
+              <span className="text-[8px] font-bold text-primary">Z</span>
+            </div>
+            <span className="font-semibold text-sm text-foreground">Zapier</span>
+            <div className="flex gap-0.5">
+              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+            </div>
+          </div>
+          <div className="flex items-center gap-1">
+            <Globe className="h-3 w-3 text-muted-foreground" />
+            <Scissors className="h-3 w-3 text-muted-foreground" />
+            <Bookmark className="h-3 w-3 text-muted-foreground" />
+          </div>
         </div>
-        <p className="text-xs text-muted-foreground">Zapier, founded in 2011 by Wade Foster, Bryan Helmig, and Mike Knoop...</p>
+        <p className="text-[10px] text-muted-foreground mb-2">Zapier, founded in 2011 by Wade Foster, Bryan Helmig, and Mike Knoop...<span className="font-semibold text-foreground">Show more</span></p>
+        
+        {/* Add to company list */}
+        <Button className="w-full rounded-full text-xs mb-2" size="sm">
+          Add to company list
+        </Button>
+
+        {/* Company details */}
+        <div className="space-y-1.5 text-[10px] text-foreground">
+          <div className="flex items-center gap-2">
+            <MapPin className="h-3 w-3 text-muted-foreground" />
+            <span>San Francisco, CA</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Calendar className="h-3 w-3 text-muted-foreground" />
+            <span>Founded in 2011</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Users className="h-3 w-3 text-muted-foreground" />
+            <span>840+ employees</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <DollarSign className="h-3 w-3 text-muted-foreground" />
+            <span>$200M annual revenue</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
