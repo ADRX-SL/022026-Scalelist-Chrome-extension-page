@@ -1,7 +1,7 @@
 import { Star, ArrowRight, Globe, Triangle, Play, ChevronDown, Bookmark, Scissors, MapPin, Calendar, Users, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import scalelistIcon from "@/assets/scalelist-icon.png";
-import andreaRiley from "@/assets/andrea-riley.png";
+import sarahWestwood from "@/assets/sarah-westwood.png";
 import professionalCover from "@/assets/professional-cover.png";
 const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
@@ -42,7 +42,7 @@ const BrowserMockup = () => (
           {/* Profile avatar */}
           <div className="absolute -bottom-14 left-4">
             <div className="h-32 w-32 rounded-full border-2 border-white overflow-hidden relative">
-              <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
+              <img src={sarahWestwood} alt="Sarah Westwood" className="h-full w-full object-cover" />
               <div className="absolute bottom-1 right-1 h-3.5 w-3.5 rounded-full border-2 border-white bg-green-500" />
             </div>
           </div>
@@ -50,13 +50,13 @@ const BrowserMockup = () => (
         {/* Profile info */}
         <div className="px-4 pt-20 pb-3">
           <div className="flex items-center gap-2 mb-0.5">
-            <p className="font-bold text-sm text-foreground">Andrea Riley</p>
+            <p className="font-bold text-sm text-foreground">Sarah Westwood</p>
             <span className="text-[10px] text-muted-foreground">1st</span>
             <span className="rounded border border-border px-1.5 py-0.5 text-[8px] text-muted-foreground">Connected: 2/25/2026</span>
           </div>
-          <p className="text-xs text-muted-foreground">Sales Director at n8N</p>
+          <p className="text-xs text-muted-foreground">Growth at Grok</p>
           <div className="flex items-center gap-3 mt-1 text-[10px] text-muted-foreground">
-            <span className="flex items-center gap-0.5"><MapPin className="h-2.5 w-2.5" />San Francisco Bay Area</span>
+            <span className="flex items-center gap-0.5"><MapPin className="h-2.5 w-2.5" />Austin, Texas</span>
             <span className="flex items-center gap-0.5"><Users className="h-2.5 w-2.5" />500+ connections</span>
           </div>
           {/* Buttons */}
@@ -88,7 +88,7 @@ const BrowserMockup = () => (
       <div className="px-4 pt-4 pb-2">
         <div className="flex items-start justify-between mb-2">
           <div className="h-10 w-10 rounded-full shrink-0 overflow-hidden">
-            <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
+            <img src={sarahWestwood} alt="Sarah Westwood" className="h-full w-full object-cover" />
           </div>
           <div className="flex items-center gap-1">
             <Globe className="h-3.5 w-3.5 text-muted-foreground" />
@@ -97,9 +97,9 @@ const BrowserMockup = () => (
             <span className="rounded bg-primary/10 px-1 text-[8px] font-bold text-primary">FREE</span>
           </div>
         </div>
-        <p className="font-bold text-sm text-foreground">Andrea Riley</p>
-        <p className="text-xs text-muted-foreground">Sales Director at n8N</p>
-        <p className="text-[10px] text-muted-foreground mt-0.5">San Francisco Bay Area</p>
+        <p className="font-bold text-sm text-foreground">Sarah Westwood</p>
+        <p className="text-xs text-muted-foreground">Growth at Grok</p>
+        <p className="text-[10px] text-muted-foreground mt-0.5">Austin, Texas</p>
       </div>
 
       {/* Push to Hubspot + Add to list */}
@@ -119,8 +119,8 @@ const BrowserMockup = () => (
         <p className="text-[10px] font-semibold text-muted-foreground mb-1 flex items-center gap-1">
           Contact details <ChevronDown className="h-2.5 w-2.5" />
         </p>
-        <p className="text-xs font-medium text-primary">andrea@n8n.com</p>
-        <p className="text-xs text-foreground mt-0.5">+1 78 617 74 86</p>
+        <p className="text-xs font-medium text-primary">s.w@grok.ai</p>
+        <p className="text-xs text-foreground mt-0.5">+1 79 349 72 93</p>
       </div>
 
     </div>
