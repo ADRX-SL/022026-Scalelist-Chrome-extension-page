@@ -40,15 +40,15 @@ const BrowserMockup = () => (
         <div className="h-20 relative overflow-hidden">
           <img src={professionalCover} alt="" className="h-full w-full object-cover" />
           {/* Profile avatar */}
-          <div className="absolute -bottom-10 left-4">
-            <div className="h-24 w-24 rounded-full border-2 border-white overflow-hidden relative">
+          <div className="absolute -bottom-14 left-4">
+            <div className="h-32 w-32 rounded-full border-2 border-white overflow-hidden relative">
               <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
               <div className="absolute bottom-1 right-1 h-3.5 w-3.5 rounded-full border-2 border-white bg-green-500" />
             </div>
           </div>
         </div>
         {/* Profile info */}
-        <div className="px-4 pt-14 pb-3">
+        <div className="px-4 pt-20 pb-3">
           <div className="flex items-center gap-2 mb-0.5">
             <p className="font-bold text-sm text-foreground">Andrea Riley</p>
             <span className="text-[10px] text-muted-foreground">1st</span>
