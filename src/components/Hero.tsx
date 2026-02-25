@@ -43,7 +43,7 @@ const BrowserMockup = () => (
           {/* Profile avatar */}
           <div className="absolute -bottom-14 left-4">
             <div className="h-32 w-32 rounded-full border-2 border-white overflow-hidden relative">
-              <img src={sarahWestwood} alt="Sarah Westwood" className="h-full w-full object-cover" />
+              <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
               <div className="absolute bottom-1 right-1 h-3.5 w-3.5 rounded-full border-2 border-white bg-green-500" />
             </div>
           </div>
