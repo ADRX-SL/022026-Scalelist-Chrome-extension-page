@@ -40,15 +40,15 @@ const BrowserMockup = () => (
         <div className="h-20 relative overflow-hidden">
           <img src={professionalCover} alt="" className="h-full w-full object-cover" />
           {/* Profile avatar */}
-          <div className="absolute -bottom-7 left-4">
-            <div className="h-16 w-16 rounded-full border-2 border-white overflow-hidden relative">
+          <div className="absolute -bottom-10 left-4">
+            <div className="h-24 w-24 rounded-full border-2 border-white overflow-hidden relative">
               <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
-              <div className="absolute bottom-0.5 right-0.5 h-3 w-3 rounded-full border-2 border-white bg-green-500" />
+              <div className="absolute bottom-1 right-1 h-3.5 w-3.5 rounded-full border-2 border-white bg-green-500" />
             </div>
           </div>
         </div>
         {/* Profile info */}
-        <div className="px-4 pt-9 pb-3">
+        <div className="px-4 pt-14 pb-3">
           <div className="flex items-center gap-2 mb-0.5">
             <p className="font-bold text-sm text-foreground">Andrea Riley</p>
             <span className="text-[10px] text-muted-foreground">1st</span>
@@ -121,53 +121,6 @@ const BrowserMockup = () => (
         <p className="text-xs text-foreground mt-0.5">+1 78 617 74 86</p>
       </div>
 
-      {/* Company info */}
-      <div className="px-4 py-2 border-t border-border">
-        <div className="flex items-center justify-between mb-1">
-          <div className="flex items-center gap-2">
-            <div className="h-5 w-5 rounded bg-primary/20 flex items-center justify-center">
-              <span className="text-[8px] font-bold text-primary">Z</span>
-            </div>
-            <span className="font-semibold text-sm text-foreground">Zapier</span>
-            <div className="flex gap-0.5">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-            </div>
-          </div>
-          <div className="flex items-center gap-1">
-            <Globe className="h-3 w-3 text-muted-foreground" />
-            <Scissors className="h-3 w-3 text-muted-foreground" />
-            <Bookmark className="h-3 w-3 text-muted-foreground" />
-          </div>
-        </div>
-        <p className="text-[10px] text-muted-foreground mb-2">Zapier, founded in 2011 by Wade Foster, Bryan Helmig, and Mike Knoop...<span className="font-semibold text-foreground">Show more</span></p>
-        
-        {/* Add to company list */}
-        <Button className="w-full rounded-full text-xs mb-2" size="sm">
-          Add to company list
-        </Button>
-
-        {/* Company details */}
-        <div className="space-y-1.5 text-[10px] text-foreground">
-          <div className="flex items-center gap-2">
-            <MapPin className="h-3 w-3 text-muted-foreground" />
-            <span>San Francisco, CA</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Calendar className="h-3 w-3 text-muted-foreground" />
-            <span>Founded in 2011</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Users className="h-3 w-3 text-muted-foreground" />
-            <span>840+ employees</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <DollarSign className="h-3 w-3 text-muted-foreground" />
-            <span>$200M annual revenue</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 );
