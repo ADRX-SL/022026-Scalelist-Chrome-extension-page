@@ -105,15 +105,10 @@ const N8nCompanyMockup = () => (
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-1.5">
             <img src={n8nLogo} alt="n8n" className="h-8 w-8 rounded shrink-0" />
-            <div>
-              <div className="flex items-center gap-1">
-                <p className="font-bold text-xs text-foreground">n8n</p>
-                <div className="flex gap-0.5">
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                </div>
-              </div>
+            <div className="flex gap-0.5">
+              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
             </div>
           </div>
           <div className="flex items-center gap-0.5">
