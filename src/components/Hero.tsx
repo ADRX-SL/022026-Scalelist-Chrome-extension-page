@@ -95,9 +95,9 @@ const BrowserMockup = () => (
             <span className="rounded bg-primary/10 px-1 text-[8px] font-bold text-primary">FREE</span>
           </div>
         </div>
-        <p className="font-bold text-sm text-foreground">Daniel Scott</p>
-        <p className="text-xs text-muted-foreground">Support Advisor at Zapier</p>
-        <p className="text-[10px] text-muted-foreground mt-0.5">Los Angeles, California, United States</p>
+        <p className="font-bold text-sm text-foreground">Andrea Riley</p>
+        <p className="text-xs text-muted-foreground">Sales Director at n8N</p>
+        <p className="text-[10px] text-muted-foreground mt-0.5">San Francisco Bay Area</p>
       </div>
 
       {/* Push to Hubspot + Add to list */}
@@ -117,7 +117,7 @@ const BrowserMockup = () => (
         <p className="text-[10px] font-semibold text-muted-foreground mb-1 flex items-center gap-1">
           Contact details <ChevronDown className="h-2.5 w-2.5" />
         </p>
-        <p className="text-xs font-medium text-primary">danielscott@zapier.com</p>
+        <p className="text-xs font-medium text-primary">andrea@n8n.com</p>
         <p className="text-xs text-foreground mt-0.5">+1 78 617 74 86</p>
       </div>
 
