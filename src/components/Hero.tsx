@@ -15,9 +15,9 @@ import capterraIcon from "@/assets/capterra.png";
 const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
     {icon === "google" ? (
-      <Globe className="h-4 w-4 text-muted-foreground" />
+      <img src={googleRating} alt="Google" className="h-4 w-4 object-contain" />
     ) : (
-      <Triangle className="h-4 w-4 fill-orange-500 text-orange-500" />
+      <img src={capterraIcon} alt="Capterra" className="h-4 w-4 object-contain" />
     )}
     <span className="font-medium text-foreground">{rating} on {platform}</span>
     <div className="flex">
