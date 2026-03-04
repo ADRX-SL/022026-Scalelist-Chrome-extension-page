@@ -7,7 +7,7 @@ import n8nWebsite from "@/assets/n8n-website.png";
 import n8nLogo from "@/assets/n8n-logo.png";
 
 const SarahMockup = () => (
-  <div className="relative w-full max-w-md mx-auto" style={{ transform: 'scale(0.92) translateX(-32px)', transformOrigin: 'center center' }}>
+  <div className="relative w-full max-w-md mx-auto" style={{ transform: 'scale(0.88) translateX(-32px)', transformOrigin: 'center center' }}>
     {/* Browser window */}
     <div className="rounded-xl border border-border bg-white shadow-xl overflow-hidden">
       {/* Browser chrome */}
@@ -196,11 +196,11 @@ const FeatureCard = ({
   <div className="rounded-2xl bg-card p-8 flex flex-col h-full">
     {/* Image placeholder */}
     {customImage ? (
-      <div className="mb-6 rounded-xl bg-muted overflow-visible p-4 flex items-center justify-center" style={{ minHeight: '340px' }}>
+      <div className="mb-6 rounded-xl bg-muted overflow-visible p-4 flex items-center justify-center aspect-square">
         {customImage}
       </div>
     ) : (
-      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted" style={{ minHeight: '340px' }}>
+      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted aspect-square">
         <Icon className="h-16 w-16 text-muted-foreground/40" />
       </div>
     )}
