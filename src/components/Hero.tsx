@@ -100,7 +100,7 @@ const BrowserMockup = () => (
             <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
           </div>
           <div className="flex items-center gap-1">
-            <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+            <img src={googleRating} alt="Google" className="h-3.5 w-3.5 object-contain" />
             <Scissors className="h-3.5 w-3.5 text-muted-foreground" />
             <Bookmark className="h-3.5 w-3.5 text-muted-foreground" />
             <span className="rounded bg-primary/10 px-1 text-[8px] font-bold text-primary">FREE</span>
