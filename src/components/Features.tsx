@@ -101,7 +101,7 @@ const SarahMockup = () => (
 );
 
 const N8nCompanyMockup = () => (
-  <div className="relative w-full overflow-hidden rounded-xl" style={{ minHeight: '320px' }}>
+  <div className="relative w-full overflow-hidden rounded-xl h-full">
     {/* Background: n8n website screenshot filling entire area */}
     <img src={n8nWebsite} alt="n8n website" className="absolute inset-0 w-full h-full object-cover" />
     {/* Scalelist icon in top-right */}
