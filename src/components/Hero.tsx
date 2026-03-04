@@ -10,6 +10,8 @@ import logoStripe from "@/assets/logo-stripe.png";
 import logoJpmorgan from "@/assets/logo-jpmorgan.webp";
 import logoNetsuite from "@/assets/logo-netsuite.webp";
 import logoBd from "@/assets/logo-bd.png";
+import googleRating from "@/assets/google-rating.png";
+import capterraIcon from "@/assets/capterra.png";
 const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
     {icon === "google" ? (
