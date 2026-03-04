@@ -226,7 +226,7 @@ const Features = () => {
         <h2 className="mx-auto mb-12 max-w-3xl text-center text-4xl font-extrabold tracking-tight text-foreground">
           Find Contact Information & Build Targeted Lists Anywhere
         </h2>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FeatureCard
             title="On Professional Profiles"
             icon={Users}
