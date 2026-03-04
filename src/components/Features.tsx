@@ -101,7 +101,7 @@ const SarahMockup = () => (
 );
 
 const N8nCompanyMockup = () => (
-  <div className="relative w-full overflow-hidden rounded-xl" style={{ minHeight: '320px' }}>
+  <div className="relative w-full overflow-hidden rounded-xl h-full">
     {/* Background: n8n website screenshot filling entire area */}
     <img src={n8nWebsite} alt="n8n website" className="absolute inset-0 w-full h-full object-cover" />
     {/* Scalelist icon in top-right */}
@@ -196,11 +196,11 @@ const FeatureCard = ({
   <div className="rounded-2xl bg-card p-8 flex flex-col h-full">
     {/* Image placeholder */}
     {customImage ? (
-      <div className="mb-6 rounded-xl bg-muted overflow-visible py-6 px-4 flex items-center justify-center flex-1">
+      <div className="mb-6 rounded-xl bg-muted overflow-visible p-4 flex items-center justify-center" style={{ minHeight: '340px' }}>
         {customImage}
       </div>
     ) : (
-      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted flex-1">
+      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted" style={{ minHeight: '340px' }}>
         <Icon className="h-16 w-16 text-muted-foreground/40" />
       </div>
     )}
@@ -226,7 +226,7 @@ const Features = () => {
         <h2 className="mx-auto mb-12 max-w-3xl text-center text-4xl font-extrabold tracking-tight text-foreground">
           Find Contact Information & Build Targeted Lists Anywhere
         </h2>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FeatureCard
             title="On Professional Profiles"
             icon={Users}
