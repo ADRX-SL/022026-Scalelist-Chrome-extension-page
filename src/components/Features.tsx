@@ -7,7 +7,7 @@ import n8nWebsite from "@/assets/n8n-website.png";
 import n8nLogo from "@/assets/n8n-logo.png";
 
 const SarahMockup = () => (
-  <div className="relative w-full max-w-md mx-auto" style={{ transform: 'scale(0.92) translateX(-32px)', transformOrigin: 'center center' }}>
+  <div className="relative w-full max-w-md mx-auto" style={{ transform: 'scale(0.88) translateX(-32px)', transformOrigin: 'center center' }}>
     {/* Browser window */}
     <div className="rounded-xl border border-border bg-white shadow-xl overflow-hidden">
       {/* Browser chrome */}
