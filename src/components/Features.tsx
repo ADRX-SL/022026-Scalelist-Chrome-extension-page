@@ -196,7 +196,7 @@ const FeatureCard = ({
   <div className="rounded-2xl bg-card p-8 flex flex-col h-full">
     {/* Image placeholder */}
     {customImage ? (
-      <div className="mb-6 rounded-xl bg-muted overflow-visible p-4 flex items-center justify-center" style={{ minHeight: '340px' }}>
+      <div className="mb-6 rounded-xl bg-muted overflow-visible p-4 flex items-center justify-center aspect-square">
         {customImage}
       </div>
     ) : (
