@@ -186,12 +186,16 @@ const Hero = () => {
                 Find verified professional emails and phone numbers from professional profiles and any website.
               </p>
               <div className="mb-10 flex flex-wrap items-center gap-4">
-                <Button size="lg" className="gap-2 rounded-full px-8 text-base">
-                  Download Chrome Extension <ArrowRight className="h-4 w-4" />
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 text-base">
-                  Talk to Sales
-                </Button>
+                <a href="https://chromewebstore.google.com/detail/email-finder-by-scalelist/lgknneiodddmfbbpaklighafdocbfnme?pli=1" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="gap-2 rounded-full px-8 text-base">
+                    Download Chrome Extension <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </a>
+                <a href="https://form.typeform.com/to/lvQHcXGx?typeform-source=scalelist.com" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" className="rounded-full px-8 text-base">
+                    Talk to Sales
+                  </Button>
+                </a>
               </div>
               <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground/50">
                 7000+ companies save time using Scalelist
