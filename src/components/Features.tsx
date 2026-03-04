@@ -196,11 +196,11 @@ const FeatureCard = ({
   <div className="rounded-2xl bg-card p-8 flex flex-col h-full">
     {/* Image placeholder */}
     {customImage ? (
-      <div className="mb-6 rounded-xl bg-muted overflow-visible py-6 px-4 flex items-center justify-center flex-1">
+      <div className="mb-6 rounded-xl bg-muted overflow-visible p-4 flex items-center justify-center" style={{ minHeight: '340px' }}>
         {customImage}
       </div>
     ) : (
-      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted flex-1">
+      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted" style={{ minHeight: '340px' }}>
         <Icon className="h-16 w-16 text-muted-foreground/40" />
       </div>
     )}
