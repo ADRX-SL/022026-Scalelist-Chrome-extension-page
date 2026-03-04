@@ -1,4 +1,4 @@
-import { Star, ArrowRight, Globe, Triangle, Play, ChevronDown, Bookmark, Scissors, MapPin, Calendar, Users, DollarSign } from "lucide-react";
+import { Star, ArrowRight, Play, ChevronDown, Bookmark, Scissors, MapPin, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import scalelistIcon from "@/assets/scalelist-icon.png";
 import andreaRiley from "@/assets/andrea-riley.png";
