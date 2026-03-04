@@ -200,7 +200,7 @@ const FeatureCard = ({
         {customImage}
       </div>
     ) : (
-      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted" style={{ minHeight: '340px' }}>
+      <div className="mb-6 flex items-center justify-center rounded-xl bg-muted aspect-square">
         <Icon className="h-16 w-16 text-muted-foreground/40" />
       </div>
     )}
