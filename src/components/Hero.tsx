@@ -4,6 +4,12 @@ import scalelistIcon from "@/assets/scalelist-icon.png";
 import andreaRiley from "@/assets/andrea-riley.png";
 import sarahWestwood from "@/assets/sarah-westwood.png";
 import professionalCover from "@/assets/professional-cover.png";
+import logoElevenlabs from "@/assets/logo-elevenlabs.avif";
+import logoCloudera from "@/assets/logo-cloudera.webp";
+import logoStripe from "@/assets/logo-stripe.png";
+import logoJpmorgan from "@/assets/logo-jpmorgan.webp";
+import logoNetsuite from "@/assets/logo-netsuite.webp";
+import logoBd from "@/assets/logo-bd.png";
 const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
     {icon === "google" ? (
