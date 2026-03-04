@@ -1,4 +1,4 @@
-import { Star, ArrowRight, Globe, Triangle, Play, ChevronDown, Bookmark, Scissors, MapPin, Calendar, Users, DollarSign } from "lucide-react";
+import { Star, ArrowRight, Play, ChevronDown, Bookmark, Scissors, MapPin, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import scalelistIcon from "@/assets/scalelist-icon.png";
 import andreaRiley from "@/assets/andrea-riley.png";
@@ -10,12 +10,14 @@ import logoStripe from "@/assets/logo-stripe.png";
 import logoJpmorgan from "@/assets/logo-jpmorgan.webp";
 import logoNetsuite from "@/assets/logo-netsuite.webp";
 import logoBd from "@/assets/logo-bd.png";
+import googleRating from "@/assets/google-rating.png";
+import capterraIcon from "@/assets/capterra.png";
 const RatingBadge = ({ rating, platform, icon }: { rating: string; platform: string; icon: "google" | "capterra" }) => (
   <div className="flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm">
     {icon === "google" ? (
-      <Globe className="h-4 w-4 text-muted-foreground" />
+      <img src={googleRating} alt="Google" className="h-4 w-4 object-contain" />
     ) : (
-      <Triangle className="h-4 w-4 fill-orange-500 text-orange-500" />
+      <img src={capterraIcon} alt="Capterra" className="h-4 w-4 object-contain" />
     )}
     <span className="font-medium text-foreground">{rating} on {platform}</span>
     <div className="flex">
@@ -98,7 +100,7 @@ const BrowserMockup = () => (
             <img src={andreaRiley} alt="Andrea Riley" className="h-full w-full object-cover" />
           </div>
           <div className="flex items-center gap-1">
-            <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+            <img src={googleRating} alt="Google" className="h-3.5 w-3.5 object-contain" />
             <Scissors className="h-3.5 w-3.5 text-muted-foreground" />
             <Bookmark className="h-3.5 w-3.5 text-muted-foreground" />
             <span className="rounded bg-primary/10 px-1 text-[8px] font-bold text-primary">FREE</span>
