@@ -1,35 +1,63 @@
-import { Quote } from "lucide-react";
-import chrisHackettImg from "@/assets/chris-hackett.png";
-import baptisteGraffinImg from "@/assets/baptiste-graffin.png";
+import chrisHackettImg from "@/assets/chris-hackett.webp";
+import baptisteGraffinImg from "@/assets/baptiste-graffin.webp";
+import iconApollo from "@/assets/icon-apollo.png";
+import iconZoomInfo from "@/assets/icon-zoominfo.png";
+import iconLusha from "@/assets/icon-lusha.png";
+import iconProspeo from "@/assets/icon-prospeo.png";
+import iconFullenrich from "@/assets/icon-fullenrich.png";
+import iconScalelist from "@/assets/icon-scalelist.png";
 
-const BarChart = () => {
-  const competitors = [
-    { name: "COMP 1", value: 80 },
-    { name: "COMP 2", value: 71 },
-    { name: "COMP 3", value: 85 },
-    { name: "COMP 4", value: 75 },
-    { name: "COMP 5", value: 87 },
-    { name: "SCALELIST", value: 95, highlight: true },
-  ];
+const competitors = [
+  { name: "Apollo", value: 78, logo: iconApollo },
+  { name: "ZoomInfo", value: 69, logo: iconZoomInfo },
+  { name: "Lusha", value: 83, logo: iconLusha },
+  { name: "Prospeo", value: 72, logo: iconProspeo },
+  { name: "Fullenrich", value: 84, logo: iconFullenrich },
+  { name: "Scalelist", value: 95, highlight: true, logo: iconScalelist },
+];
 
+const MAX_BAR_HEIGHT = 220;
+
+const DataCoverageChart = () => {
   return (
-    <div className="flex items-end justify-between gap-3" style={{ height: 220 }}>
-      {competitors.map((c) => (
-        <div key={c.name} className="flex flex-1 flex-col items-center gap-2">
-          <span className={`text-sm font-semibold ${c.highlight ? "text-white" : "text-gray-300"}`}>
-            {c.value}%
-          </span>
-          <div className="relative w-full flex justify-center" style={{ height: 160 }}>
-            <div
-              className={`w-full max-w-[60px] rounded-t-md ${c.highlight ? "bg-primary" : "bg-white/10"}`}
-              style={{ height: `${(c.value / 100) * 160}px`, marginTop: "auto" }}
-            />
-          </div>
-          <span className={`text-[10px] font-semibold tracking-wider ${c.highlight ? "text-white" : "text-gray-500"}`}>
-            {c.name}
-          </span>
-        </div>
-      ))}
+    <div className="flex flex-col items-start gap-4">
+      <p className="text-xs tracking-widest uppercase text-muted-foreground font-bold">
+        Data Coverage
+      </p>
+      <div className="flex items-baseline gap-3">
+        <span className="text-4xl font-bold text-white">up to 95%</span>
+        <span className="text-sm text-gray-400">Verified emails + direct dials</span>
+      </div>
+      <button
+        className="text-sm font-bold text-chart-link hover:underline cursor-pointer bg-transparent border-none p-0 transition-colors hover:text-chart-link-hover"
+        onClick={() => {}}
+      >
+        See how we perform against competitors
+      </button>
+
+      <div className="flex items-end gap-6 mt-6">
+        {competitors.map((c) => {
+          const barHeight = (c.value / 100) * MAX_BAR_HEIGHT;
+          const isHighlight = !!c.highlight;
+
+          return (
+            <div key={c.name} className="flex flex-col items-center" style={{ width: isHighlight ? 56 : 48 }}>
+              <img src={c.logo} alt={c.name} className="object-contain mb-2" style={{ width: isHighlight ? 40 : 34, height: isHighlight ? 40 : 34 }} />
+              <span
+                className={`text-xs mb-1 ${
+                  isHighlight ? "text-white font-bold" : "text-gray-400 font-semibold"
+                }`}
+              >
+                {c.value}%
+              </span>
+              <div
+                className={`w-full rounded-sm ${isHighlight ? "bg-chart-bar-highlight" : "bg-chart-bar"}`}
+                style={{ height: `${barHeight}px` }}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -73,15 +101,7 @@ const Accuracy = () => {
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Left - Data coverage */}
           <div className="rounded-2xl bg-white/5 p-8">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gray-400">Data coverage</p>
-            <div className="mb-8 flex items-baseline gap-4">
-              <p className="text-4xl font-extrabold text-white">up to 95%</p>
-              <p className="text-sm text-gray-400">Verified emails + direct dials</p>
-            </div>
-            <p className="mb-8 text-sm text-gray-400">
-              See how we perform against competitors. <span className="inline-block">→</span>
-            </p>
-            <BarChart />
+            <DataCoverageChart />
           </div>
 
           {/* Right - Testimonials */}
@@ -94,13 +114,13 @@ const Accuracy = () => {
                 quote="I love Scalelist — Cannot recommend it enough. It does EVERYTHING you need it to do really well. Easy to use/ navigate and Arnaud and colleagues are always there to lend a hand. Built by people who really care about their product."
                 name="Chris Hackett"
                 role="CEO & Founder @ Firm Growth"
-                avatar="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                avatar={chrisHackettImg}
               />
               <TestimonialCard
                 quote="We use Scalelist everyday. It's a really good product that helps us find our prospects' emails and phone numbers."
                 name="Baptiste Graffin"
                 role="VP of Sales APAC @ Happydemics"
-                avatar="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+                avatar={baptisteGraffinImg}
               />
             </div>
           </div>

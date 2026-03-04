@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  important: true,
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
@@ -52,6 +53,10 @@ export default {
         },
         "brand-dark": "hsl(var(--brand-dark))",
         "brand-dark-section": "hsl(var(--brand-dark-section))",
+        "chart-link": "hsl(var(--chart-link))",
+        "chart-link-hover": "hsl(var(--chart-link-hover))",
+        "chart-bar": "hsl(var(--chart-bar))",
+        "chart-bar-highlight": "hsl(var(--chart-bar-highlight))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
