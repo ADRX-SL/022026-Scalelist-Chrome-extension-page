@@ -92,7 +92,7 @@ const BrowserMockup = () => (
     </div>
 
     {/* Extension panel - overlaid on right */}
-    <div className="absolute top-12 -right-16 w-64 rounded-xl border border-border bg-white shadow-2xl overflow-hidden">
+    <div className="absolute top-12 -right-16 w-72 rounded-xl border border-border bg-white shadow-2xl overflow-hidden">
       {/* Profile header with avatar and icons */}
       <div className="px-4 pt-4 pb-2">
         <div className="flex items-start justify-between mb-2">
@@ -113,12 +113,12 @@ const BrowserMockup = () => (
 
       {/* Push to Hubspot + Add to list */}
       <div className="px-4 py-2 flex items-center gap-2">
-        <div className="flex items-center gap-1 rounded-lg border border-border px-3 py-1.5 text-xs text-muted-foreground flex-1">
+        <div className="flex items-center justify-center gap-1 rounded-lg border border-border px-3 py-1.5 text-[10px] text-muted-foreground flex-1">
           <Scissors className="h-3 w-3" />
           <span>Push to Hubspot</span>
           <ChevronDown className="h-3 w-3 ml-auto" />
         </div>
-        <Button size="sm" className="rounded-lg px-3 py-1.5 text-xs gap-1">
+        <Button size="sm" className="rounded-lg px-3 py-1.5 text-[10px] gap-1 flex-1">
           <Play className="h-3 w-3 fill-primary-foreground" /> Add to list
         </Button>
       </div>
