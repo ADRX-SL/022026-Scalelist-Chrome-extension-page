@@ -3,10 +3,10 @@ const BenchmarkVideo = () => {
     <section className="bg-background py-16">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="mb-3 text-center text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
-          Watch the full benchmark
+          Watch the full breakdown
         </h2>
         <p className="mb-10 text-center text-muted-foreground">
-          See how Scalelist compares against other email and mobile data providers.
+          See how Scalelist gets you any email and mobile numbers from anywhere online.
         </p>
         <div className="mx-auto aspect-video w-full overflow-hidden rounded-2xl shadow-lg">
           <iframe
